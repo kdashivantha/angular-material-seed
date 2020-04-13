@@ -19,7 +19,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
     imports: [
         MatButtonModule,
@@ -40,7 +40,8 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatTooltipModule,
         MatTreeModule,
         MatProgressSpinnerModule,
-        MatTabsModule
+        MatTabsModule,
+        MatMenuModule
     ],
     declarations: [ ],
     exports:[ 
@@ -62,7 +63,8 @@ import { MatTabsModule } from '@angular/material/tabs';
         MatTooltipModule,
         MatTreeModule,
         MatProgressSpinnerModule,
-        MatTabsModule
+        MatTabsModule,
+        MatMenuModule
     ]
 })
 

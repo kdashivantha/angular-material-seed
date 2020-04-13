@@ -5,11 +5,13 @@ import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
       MainComponent, 
-      HeaderComponent
+      HeaderComponent,
+      SideMenuComponent
     ],
   imports: [
     CommonModule,

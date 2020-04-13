@@ -6,7 +6,7 @@ const routes: Routes = [
   { 
     path: '', 
     component: MainComponent,
-    //loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule) 
+    loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule) 
   },
   { 
     path: '**', 

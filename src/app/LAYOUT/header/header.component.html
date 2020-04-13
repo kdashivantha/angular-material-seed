@@ -1,15 +1,30 @@
-<mat-toolbar  color="primary"  class="fixed-header mat-elevation-z1">
-    <mat-toolbar-row>
-        <span>LOGO</span>
-        <div>
-            <button mat-icon-button (click)="toggleSidenav()">
-             <mat-icon>menu</mat-icon>
-           </button>
-        </div>
-
-        <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
-                    <a  mat-button  routerLink="/login">Login</a>
-         </div>
-        
-    </mat-toolbar-row>
+<mat-toolbar color="primary" class="main-toolbar fixed-header mat-elevation-z3">
+    <span>
+        <button fxHide.lg="true" fxHide.md="true" mat-icon-button (click)="toggleSidenav()">
+            <mat-icon aria-label="Open side bar">menu</mat-icon>
+        </button>
+    </span>
+    <span>SEED APPLICATION</span>
+    <span fxFlex="grow"></span>
+    <!-- button matTooltip="Logout" mat-icon-button><mat-icon>power_settings_new</mat-icon></button -->
+    <button matTooltip="Configuration" mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>settings</mat-icon>
+    </button>
+    <a mat-button routerLink="/login">Login</a>
 </mat-toolbar>
+
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item>
+        <mat-icon> person_outline </mat-icon>
+        <span> Profile </span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon> settings </mat-icon>
+        <span> Configuration </span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+        <mat-icon> exit_to_app </mat-icon>
+        <span> Logout </span>
+    </button>
+</mat-menu>

@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() toggleSidebar = new EventEmitter();
-  sidebarOpened = false;
+  private _sidebarOpened: boolean = false;
 
   constructor() { }
 
@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
    * Toggle the sidenav menu.
    */
   toggleSidenav() {
-      this.sidebarOpened = !this.sidebarOpened;
-      this.toggleSidebar.emit(this.sidebarOpened);
+      this._sidebarOpened = !this._sidebarOpened;
+      this.toggleSidebar.emit(this._sidebarOpened);
   }
 
 }

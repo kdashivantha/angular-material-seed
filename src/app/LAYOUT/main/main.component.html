@@ -1,21 +1,68 @@
 <!-- header includes logo, titles, and actions -->
-<app-header (toggleSidebar)="sidenav.toggle()"></app-header>
+<app-header (toggleSidebar)="sidenav.toggle()" class="app-header"></app-header>
 <!-- End header -->
 
 
-<mat-sidenav-container>
+<mat-sidenav-container class="container" fxLayout="row wrap" fullscreen>
     <!-- Collapsible side content -->
-    <mat-sidenav  mode="side" opened [disableClose]="true" #sidenav role="navigation">
-        <!-- <app-sidenav></app-sidenav> -->
+    <mat-sidenav  mode="{{SideNavMode}}" opened="false" #sidenav fxFlex="260px" class="mat-elevation-z3">
+        <app-side-menu></app-side-menu>
     </mat-sidenav>
-    <mat-sidenav #right position="end" style="width:600px;">
+    <mat-sidenav #right position="end" opened="false">
             Start Sidenav.
     </mat-sidenav>
     <!-- End Collapsible side content -->
 
     <!-- Main Content Area -->
-    <mat-sidenav-content class="main-content">
-            <router-outlet></router-outlet>
+    <mat-sidenav-content>
+        <div class="main-content">
+            <!-- <router-outlet></router-outlet> -->
+
+
+
+            <mat-nav-list fxFlex="nogrow" fxHide.xs>
+                <a mat-list-item> Add Invoice </a>
+                <a mat-list-item> All Invoices </a>
+                <a mat-list-item> Pendings </a>
+                <a mat-list-item> View Batches </a>
+            </mat-nav-list>
+            <div fxFlex>
+                    <mat-card >
+                            <mat-card-title>
+                                Detailed Entries
+                            </mat-card-title>
+                            <mat-card-subtitle>
+                                create entries for the date
+                            </mat-card-subtitle>
+                            <mat-card-content>
+                                <p matLine>Simple card</p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button color="primary" mat-raised-button>Save</button>
+                                <button mat-button>Clear</button>
+                            </mat-card-actions>
+                        </mat-card>
+                        <mat-card >
+                            <mat-card-title>
+                                Download &amp; Instructions
+                            </mat-card-title>
+                            <mat-card-subtitle>
+                                blog.encodez.com
+                            </mat-card-subtitle>
+                            <mat-card-content>
+                                <p>Please follow the link below to download and further Instructions</p>
+                                
+                            </mat-card-content>
+                            <mat-card-actions>
+                                    <a mat-raised-button color="warn" href="/downloads/angular-material-theme-free-download"><mat-icon>flight_land</mat-icon> Download</a>
+                            </mat-card-actions>
+                        </mat-card>
+            </div>
+
+
+
+
+        </div>
     </mat-sidenav-content>
     <!-- End Main Content Area -->
 </mat-sidenav-container>

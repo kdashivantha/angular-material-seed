@@ -1,0 +1,15 @@
+<mat-toolbar  color="primary"  class="fixed-header mat-elevation-z1">
+    <mat-toolbar-row>
+        <span>LOGO</span>
+        <div>
+            <button mat-icon-button (click)="toggleSidenav()">
+             <mat-icon>menu</mat-icon>
+           </button>
+        </div>
+
+        <div fxFlex fxLayout fxLayoutAlign="flex-end"  fxHide.xs>
+                    <a  mat-button  routerLink="/login">Login</a>
+         </div>
+        
+    </mat-toolbar-row>
+</mat-toolbar>

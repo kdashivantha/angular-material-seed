@@ -14,7 +14,7 @@ html, body{
     min-height:56px;
     max-height: 56px;
 }
-.main-content {
+.main-content .content-body {
     padding: 40px 20px 20px 20px;
 }
 
@@ -23,7 +23,7 @@ mat-sidenav {
     padding-top: 60px; 
 }
 mat-sidenav-container {
-    padding-top: 60px;
+    padding-top: 56px;
     background-color: #efefef;
 }
 mat-sidenav-content {

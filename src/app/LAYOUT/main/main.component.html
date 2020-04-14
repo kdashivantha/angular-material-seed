@@ -8,55 +8,55 @@
     <mat-sidenav  mode="{{SideNavMode}}" opened="false" #sidenav fxFlex="260px" class="mat-elevation-z3">
         <app-side-menu></app-side-menu>
     </mat-sidenav>
-    <mat-sidenav #right position="end" opened="false">
+    <mat-sidenav #right position="end" opened="false" fxFlex="260px" class="mat-elevation-z3">
             Start Sidenav.
     </mat-sidenav>
     <!-- End Collapsible side content -->
 
     <!-- Main Content Area -->
-    <mat-sidenav-content>
+    <mat-sidenav-content fxFlex>
+
         <div class="main-content">
             <!-- <router-outlet></router-outlet> -->
 
 
+            <mat-toolbar color="primary" class="secondary-toolbar mat-elevation-z1">
+                        <!-- <button class="fab-theme" matTooltip="Choose theme" [matMenuTriggerFor]="themeMenu" mat-fab><mat-icon>dialpad</mat-icon></button> -->
+                        <mat-toolbar-row> <mat-icon>grid_on</mat-icon>Invoices </mat-toolbar-row>
+                        
+                        <mat-toolbar-row>
+                            <mat-tab-group>
+                                <mat-tab label="Profile"></mat-tab>
+                                <mat-tab label="Admission"></mat-tab>
+                                <mat-tab label="Class Subscriptions"></mat-tab>
+                                <mat-tab label="Attendance Reports"></mat-tab>
+                                <mat-tab label="Invoices"></mat-tab>
+                            </mat-tab-group>
+                        </mat-toolbar-row>
+                    </mat-toolbar>
+                    <!-- <mat-menu #themeMenu="matMenu" yPosition="below" xPosition="before">
+                        <button mat-menu-item> BLUE </button>
+                        <button mat-menu-item> GREEN </button>
+                    </mat-menu> -->
+            <div class="content-body" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="10px">
+                <section class="mat-typography title-group">
+                    <h1>Heading Goes Here</h1>
+                    <mat-divider></mat-divider>
+                  </section>
 
-            <mat-nav-list fxFlex="nogrow" fxHide.xs>
-                <a mat-list-item> Add Invoice </a>
-                <a mat-list-item> All Invoices </a>
-                <a mat-list-item> Pendings </a>
-                <a mat-list-item> View Batches </a>
-            </mat-nav-list>
-            <div fxFlex>
-                    <mat-card >
-                            <mat-card-title>
-                                Detailed Entries
-                            </mat-card-title>
-                            <mat-card-subtitle>
-                                create entries for the date
-                            </mat-card-subtitle>
-                            <mat-card-content>
-                                <p matLine>Simple card</p>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <button color="primary" mat-raised-button>Save</button>
-                                <button mat-button>Clear</button>
-                            </mat-card-actions>
-                        </mat-card>
-                        <mat-card >
-                            <mat-card-title>
-                                Download &amp; Instructions
-                            </mat-card-title>
-                            <mat-card-subtitle>
-                                blog.encodez.com
-                            </mat-card-subtitle>
-                            <mat-card-content>
-                                <p>Please follow the link below to download and further Instructions</p>
-                                
-                            </mat-card-content>
-                            <mat-card-actions>
-                                    <a mat-raised-button color="warn" href="/downloads/angular-material-theme-free-download"><mat-icon>flight_land</mat-icon> Download</a>
-                            </mat-card-actions>
-                        </mat-card>
+                <div>
+                    <mat-grid-list cols="4" rowHeight="200px">
+                      <mat-grid-tile [colspan]="3" [rowspan]="1">1
+                      </mat-grid-tile>
+                      <mat-grid-tile [colspan]="1" [rowspan]="2">2
+                      </mat-grid-tile>
+                      <mat-grid-tile [colspan]="1" [rowspan]="1">3
+                      </mat-grid-tile>
+                      <mat-grid-tile [colspan]="2" [rowspan]="1">4
+                      </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+
             </div>
 
 

@@ -20,8 +20,27 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CommonModule } from '@angular/common';
 @NgModule({
     imports: [
+        CommonModule,
+        MatBadgeModule,
+        MatGridListModule,
+        MatSelectModule,
+        MatRadioModule,
+        MatDatepickerModule,
+        MatChipsModule,
+        MatTooltipModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatCardModule,
+        MatCheckboxModule,
         MatButtonModule,
         MatCardModule,
         MatExpansionModule,
@@ -45,6 +64,16 @@ import { MatMenuModule } from '@angular/material/menu';
     ],
     declarations: [ ],
     exports:[ 
+        MatBadgeModule,
+        MatGridListModule,
+        MatSelectModule,
+        MatRadioModule,
+        MatChipsModule,
+        MatTooltipModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatCardModule,
+        MatCheckboxModule,
         MatButtonModule,
         MatCardModule,
         MatExpansionModule,
@@ -65,6 +94,9 @@ import { MatMenuModule } from '@angular/material/menu';
         MatProgressSpinnerModule,
         MatTabsModule,
         MatMenuModule
+    ],
+    providers: [
+        MatDatepickerModule
     ]
 })
 
